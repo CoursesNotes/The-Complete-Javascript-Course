@@ -22,3 +22,6 @@
                 - Weather Data
                 - Movies Data
                 - Send email or SMS
+
+
+![Ajax](https://raw.githubusercontent.com/CoursesNotes/The-Complete-Javascript-Course/master/images/Ajax.png)
