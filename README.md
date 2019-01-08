@@ -25,3 +25,18 @@
 
 
 ![Ajax](https://raw.githubusercontent.com/CoursesNotes/The-Complete-Javascript-Course/master/images/Ajax.png)
+
+
+
+
+## USEFUL Commands 
+
+##### 1. CONSOLE commands: 
+    -  ls - shows the files contained in a Folder
+    - mkdir 'folder Name' - to create a new Folder
+    - rm - r - Delete a file(rm) or a folder and its containg files(rm -r)
+    - clear - to clear the terminal console
+    - mv - to move a file into another Folder
+    - touch 'file name' - creates a new file
+    - npm init - creates a package.json file
+    
