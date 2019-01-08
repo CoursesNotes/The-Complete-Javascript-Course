@@ -42,4 +42,8 @@
     - npm install webpack --save-dev - in order to install packages ( what --save-dev means is that it will save webpack as a development dependency of our Project). When used without -dev that package it will be saved as a dependency and not as a development dependency.
     - npm install - will install all the development dependency and non dependency as specified in your package.json file;
     - npm uninstall packageName --save - command used to uninstall a package;
-    
+   
+   
+#### 2. Create a basic Webpack Configuration: 
+
+
