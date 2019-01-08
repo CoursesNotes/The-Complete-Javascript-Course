@@ -38,5 +38,8 @@
     - clear - to clear the terminal console
     - mv - to move a file into another Folder
     - touch 'file name' - creates a new file
-    - npm init - creates a package.json file
+    - npm init - creates a package.json file( contains information about the Project for npm )
+    - npm install webpack --save-dev - in order to install packages ( what --save-dev means is that it will save webpack as a development dependency of our Project). When used without -dev that package it will be saved as a dependency and not as a development dependency.
+    - npm install - will install all the development dependency and non dependency as specified in your package.json file;
+    
     
