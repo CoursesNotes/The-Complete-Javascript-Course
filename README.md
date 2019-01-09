@@ -47,7 +47,7 @@
     - npm uninstall packageName --save - command used to uninstall a package;
     - npm run SCRIIPT-NAME - command used to run an npm script
    
-##### 1. VC(Visual Code) EMMET Commands: 
+##### 2. VC(Visual Code) EMMET Commands: 
     -  ! + tab - Write exclamation point + hit the tab, writes a pre-formatted HTML skeleton. 
  
 #### 2. Create a basic Webpack Configuration: 
