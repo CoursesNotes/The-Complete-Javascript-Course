@@ -58,43 +58,47 @@
   -  To write your own webpack configuration file just go in your main src folder and add a file called webpack.config.js, which is just a regular js file in which your write your code for config: 
     
 ```javascript
-//write the Object in which you specify your settings, configurations: 
-// you need to export this Obj from this file via using node js syntax
-// Now to create this configuration we need to know that in webpack there are 4 core concepts: 
-//  - Entry Point
-//  - Output
-//  - Loaders 
-//  - Plugins
+    //write the Object in which you specify your settings, configurations: 
+    // you need to export this Obj from this file via using node js syntax
+    // Now to create this configuration we need to know that in webpack there are 4 core concepts: 
+    //  - Entry Point
+    //  - Output
+    //  - Loaders 
+    //  - Plugins
 
-const path = require('path'); //Includes a build in module 
+    const path = require('path'); //Includes a build in module 
 
-module.exports  = {
-// 1. Entry Property
-//Starting with the entry point all we need to do is to specify the Entry Property in this Object.
-// The Entry point is where the Webpack will start the Bundling, 
-//   so basically this is the file where it will start looking for all the dependencies which it should then bundle together.
-//    Also here we can specify one or more entry files:
-  entry: './src/js/index.js',
-  
-// 2. Output Property
-// Tells webpack exactly where to save our bundle file. 
-// Basically in here we pass an object, in which we put a path and filename properties 
-//            which takes as values the path to the folder and file name.
-  output: {
-   // The Path needs to be an absolute Path
-   // In order to have access to that Absolute Path, we need to use a build in node package, the one included at line 63.
-   // Now we call the method included in the path as default build, which is called resolve() 
-   //  resolve() build in method, gives us access to __dirname variable - which stands for the current absolute path;
-   //  so we use path.resolve(__dirname) to join the current absolute path with the one that we want our bundle to be in: 
-    path: path.resolve(__dirname, 'dist/js'),
-    
-    //standard name for webpack output
-    filename: 'bundle.js'
-  },
-  
-  mode: 'development'
+    module.exports  = {
+      // 1. Entry Property
+      //Starting with the entry point all we need to do is to specify the Entry Property in this Object.
+      // The Entry point is where the Webpack will start the Bundling, 
+      //  so basically this is the file where it will start looking for all 
+      //       the dependencies which it should then bundle together.
+      //    Also here we can specify one or more entry files:
+    entry: './src/js/index.js',
 
-}; 
+      // 2. Output Property
+      // Tells webpack exactly where to save our bundle file. 
+      // Basically in here we pass an object, in which we put a path and filename properties 
+      //            which takes as values the path to the folder and file name.
+      output: {
+       // The Path needs to be an absolute Path
+       // In order to have access to that Absolute Path, we need to use a build 
+       //          in node package, the one included at line 63.
+       // Now we call the method included in the path as default build, which is called resolve() 
+       //  resolve() build in method, gives us access to __dirname variable
+       //           - which stands for the current absolute path;
+       //  so we use path.resolve(__dirname) to join the current 
+       //            absolute path with the one that we want our bundle to be in: 
+        path: path.resolve(__dirname, 'dist/js'),
+
+        //standard name for webpack output
+        filename: 'bundle.js'
+      },
+
+      mode: 'development'
+
+    }; 
 
 
 ```
