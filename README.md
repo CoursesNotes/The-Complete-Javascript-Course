@@ -78,7 +78,8 @@ module.exports  = {
   
 // 2. Output Property
 // Tells webpack exactly where to save our bundle file. 
-// Basically in here we pass an object, in which we put a path and filename properties which takes as values the path to the folder and file name.
+// Basically in here we pass an object, in which we put a path and filename properties 
+//            which takes as values the path to the folder and file name.
   output: {
    // The Path needs to be an absolute Path
    // In order to have access to that Absolute Path, we need to use a build in node package, the one included at line 63.
@@ -86,9 +87,11 @@ module.exports  = {
    //  resolve() build in method, gives us access to __dirname variable - which stands for the current absolute path;
    //  so we use path.resolve(__dirname) to join the current absolute path with the one that we want our bundle to be in: 
     path: path.resolve(__dirname, 'dist/js'),
+    
     //standard name for webpack output
     filename: 'bundle.js'
   },
+  
   mode: 'development'
 
 }; 
