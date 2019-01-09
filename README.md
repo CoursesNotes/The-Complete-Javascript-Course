@@ -39,10 +39,13 @@
     - mv - to move a file into another Folder
     - touch 'file name' - creates a new file
     - npm init - creates a package.json file( contains information about the Project for npm )
-    - npm install webpack --save-dev - in order to install packages ( what --save-dev means is that it will save webpack as a development dependency of our Project). When used without -dev that package it will be saved as a dependency and not as a development dependency.
-    - npm install - will install all the development dependency and non dependency as specified in your package.json file;
+    - npm install webpack --save-dev - in order to install packages ( what --save-dev means is that it 
+         will save webpack as a development dependency of our Project). When used without -dev that package
+         it will be saved as a dependency and not as a development dependency.
+    - npm install - will install all the development dependency and 
+                    non dependency as specified in your package.json file;
     - npm uninstall packageName --save - command used to uninstall a package;
-   
+    - npm run SCRIIPT-NAME - command used to run an npm script
    
 #### 2. Create a basic Webpack Configuration: 
 
@@ -103,12 +106,58 @@
 
 ```
 
-  
+-  In order to test out our webpack file config, we need to create a new Javascript file, create a test.js file and export( use the official ES6 **export default** syntax) a piece of code and then go ahead in your javascript entry file and import the newly created module, see example below: 
+
+```javascript
+    //creating a new js file - test.js and adding some code
+    console.log(`This file is being imported!`)
+    
+    //using the ES6 syntax for exporting:
+    export default 22; 
 
 
+    // going back in my entry point file - index.js, I am importing the newly created module: 
+    // Attention:  When we import from a module we don't even need to specify the file extension.
+    //             What is exported from the module is stored in the variable number
+    import number from './test'; 
+    
+    //Keep in mind that this code it won't even work in the browser if we didn't use webpack(or any other bundler), 
+    //        since the webpack does the bundling and joining files job;
+    console.log( ` I imported ${number} from another module`); 
+    
+    //
+```
+ -  Install webpack command line interface usinng the command line: **npm install webpack-cli**
+ -  Next step is to go to package.json and add an npm script, i called it npm to call the webpack and run the newly created npm script(npm run dev), like in the example below: 
+ 
+  ```javascript
+        {
+          "name": "forkify",
+          "version": "1.0.0",
+          "description": "Forkify Project",
+          "main": "index.js",
+          "scripts": {
+            //npm script calls the webpack
+            //as soon as we start the npm script called dev it will then open up the webpack,
+            //  look up at our file confing and then do the work that we specified there.
+            // It will read our entry file, do it's work ahd output it in bundle.js as we specified in the config.
+            // Why do we have to use an npm script for this? - Well because this the the best way
+            //      to lunch our locally installed dev dependency. 
+            "dev": "webpack --mode development",
+            
+            "build": "webpack --mode production"
+          },
+          "author": "Cosmina Palade",
+          "license": "ISC",
+          "devDependencies": {
+            //here we only have webpack but we also need webpack command line interface
+            "webpack": "^4.28.3",
+            "webpack-cli": "^4.28.3"
+          }
+        }
 
-
-
+    Command Line: npm run dev 
+  ```
 
 
 
