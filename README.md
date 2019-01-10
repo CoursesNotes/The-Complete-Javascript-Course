@@ -238,8 +238,20 @@ For optimization we can use webpack dev server to our setup in ordert to automat
     }
 
 ```
+ - Next step is to optimise our configurations even better byu adding Plugins, because rememeber in Webpack we have 4 major configurations which we can set - Entry Points, Outputs and Plugins. 
+ 
+ **What are Plugins?**  -  Allow us to do complex processing of our input files, in this case index.html, for this we have to use a plug-in called HTML Webpack Plugin and in order to use it you need to install it. The Command line for it is: 
 
+>  npm install html-webpack-plugin --save-dev
 
+Just like before we have to require this package and save it in a variable: 
+
+```javascript
+
+```
+
+    
+ 
 
 
 
