@@ -164,6 +164,80 @@
     Command Line: npm run dev 
   ```
 
+For optimization we can use webpack dev server to our setup in ordert to automatically reload the page when we save our code. So besides all the amazing functionalities included in webpack it also provides us with a development server, which automatically bundles all our javascript files and then reloads the App in the Browser. Since is an npm package we have to install it via the following command line: **npm install webpack-dev-server --save-dev** as shown below: 
+
+```javascript
+      {
+        "name": "forkify",
+        "version": "1.0.0",
+        "description": "Forkify Project",
+        "main": "index.js",
+        "scripts": {
+          "dev": "webpack --mode development",
+          "build": "webpack --mode production"
+        },
+        "author": "Cosmina Palade",
+        "license": "ISC",
+        "devDependencies": {
+          "webpack": "^4.28.3",
+          "webpack-dev-server": "^3.1.14"
+        },
+        "dependencies": {
+          "webpack-cli": "^3.2.1"
+        }
+      }
+
+
+```
+
+ Now we have to Configure our dev server and for this we have to go back to webpack.config.js file and add another property named "devServer" in which we pass an Obj literal with a set of properties to spcify the configuration as shown in the example below:
+ 
+ ```javascript
+ 
+      const path = require('path');
+
+      module.exports = {
+          entry: './src/js/index.js',
+          output: {
+              path: path.resolve(__dirname, 'dist/js'),
+              filename: 'bundle.js'
+          },
+          devServer: {
+              //here we specify the folder from which webpack should serve the files:
+              contentBase: './dist'
+          }
+
+      }
+ 
+ 
+ ```
+
+ - Next step is to create a npm script usually called start - which will always be a script which keeps running in the background and updates the browser as soon as we change our code. 
+  
+```javascript
+    {
+      "name": "forkify",
+      "version": "1.0.0",
+      "description": "Forkify Project",
+      "main": "index.js",
+      "scripts": {
+        "dev": "webpack --mode development",
+        "build": "webpack --mode production",
+        // by specifying open what it actually does it opens the page in the Browser
+        "start": "webpack-dev-server --mode development --open"
+      },
+      "author": "Cosmina Palade",
+      "license": "ISC",
+      "devDependencies": {
+        "webpack": "^4.28.3",
+        "webpack-dev-server": "^3.1.14"
+      },
+      "dependencies": {
+        "webpack-cli": "^3.2.1"
+      }
+    }
+
+```
 
 
 
