@@ -125,7 +125,8 @@
     //             What is exported from the module is stored in the variable number
     import number from './test'; 
     
-    //Keep in mind that this code it won't even work in the browser if we didn't use webpack(or any other bundler), 
+    //Keep in mind that this code it won't even work in the browser if we didn't use 
+    //        webpack(or any other bundler), 
     //        since the webpack does the bundling and joining files job;
     console.log( ` I imported ${number} from another module`); 
     
@@ -326,7 +327,8 @@ Setting Up Babel:
                 //  The test is looking for all the files and check if they end in js
                 test: /\.js$/,
                 //excludes anything that is a node modules folder
-                // if wqe wouldn't do that, than Babel would apply to all of the thousands Javascript files inside node
+                // if we wouldn't do that, than Babel would apply to all of the thousands 
+                //    Javascript files inside node
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
