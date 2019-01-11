@@ -247,10 +247,109 @@ For optimization we can use webpack dev server to our setup in ordert to automat
 Just like before we have to require this package and save it in a variable: 
 
 ```javascript
+    {
+      "name": "forkify",
+      "version": "1.0.0",
+      "description": "Forkify Project",
+      "main": "index.js",
+      "scripts": {
+        "dev": "webpack --mode development",
+        "build": "webpack --mode production",
+        "start": "webpack-dev-server --mode development --open"
+      },
+      "author": "Cosmina Palade",
+      "license": "ISC",
+      "devDependencies": {
+        "html-webpack-plugin": "^3.2.0",
+        "webpack": "^4.28.3",
+        "webpack-dev-server": "^3.1.14"
+      },
+      "dependencies": {
+        "webpack-cli": "^3.2.1"
+      }
+    }
 
 ```
 
+ - FINAL STEP - is to Integrate Babel into our workflow, to complete the setup. 
+ 
+ **What is BABEL?** - Babel is a Javascript Compiler making possible the use of next generation Javascript. 
+
+Setting Up Babel: 
+  In order to make Babel work you need to dowload a couple of packages: 
+   > _npm install babel-core_ - which contains the core functionalities of the compiler; 
+   > _npm install babel-preset-env_ - Babel preset which takes care that all the modern JavaScript features are converted back to ES5;
+   > _npm install babel-loader_ - Needed for Webpack to actually load Babel files; 
+ 
+ 
+ > NOTE:
+ > _You can install many packages in the same command_
+ 
+ ```javascript
     
+    //installing multiple packages with the same commanand line:
+    npm install babel-core babel-preset-env babel-loader --save-dev
+
+```
+
+**What does the Loaders in Webpack do?** 
+   - Allows us to import or load all kind of different files and more importantly to process them(like converting SASS to CSS Code or convert ES6 to ES5 Javascript);
+
+**What do we have to write in the webpack.config file in order to enable the Babel compiler?** 
+   - We enable it by using the module.exports module property and asign it an Object in which we pass the property rules. The rules property receives and array with all the loaders that we want to use - see example below: 
+      
+ ```javascript
+ 
+  //in webpack.config.js add the following properties:
+  
+ 
+
+```
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- 
+
+
+```javascript
+
+```
+
+-->
+
+ 
  
 
 
