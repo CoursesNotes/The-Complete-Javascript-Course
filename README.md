@@ -397,16 +397,15 @@ Next Step is to add 'babel-polyfill' in the entry point in webpack.config.js fil
 ## MODEL VIEW CONTROLLER - MVC
 
 Widely used and well known architecture, Model Vioew Controller Architecture(MVC) has its main advantage that it very nicely decouples the **Presentation logic** from the **Application logic** with a Controller in between them, that controls the entire App. 
-MVC is possible thanks to ES6 Modules, which allows us to make our Javascript Apps more modular by separating different aspects of the App into different files. We can use one or more module for different aspects of the App. 
+MVC is possible thanks to ES6 Modules, which allows us to make our Javascript Apps more modular by separating different aspects of the App into different files. 
 
-For example let's say we have a **Search functionality**. We will have a **Search Module** in which we do the Ajax Calls to get the recipes for a certain search query from an API. And on the other hand we have the **View** where we get the search query string from the user interface and also where we print the results of the search. The last and most important piece of the MVC puzzle, is the **Controller** which brings **Search Module** and **Search View** together, working like a glue between them.
+For example let's say we have a **Search functionality**. We will have a **Search Module** in which we do the Ajax Calls to get the recipes for a certain search query from an API. And on the other hand we have the **Search View** where we get the search query string from the user interface and also where we print the results of the search. The last and most important piece of the MVC puzzle, is the **Controller** which brings **Search Module** and **Search View** together, working like a glue between them.
 
-
-
+So Model and View never actually have to communicate, which makes the entire App more modular and easier to maintain. The Model is always concernead about the data and the apps logic, while the View gets and displays data from and to user interface. 
  
  
  
- 
+ ![Model View Controller](https://raw.githubusercontent.com/CoursesNotes/The-Complete-Javascript-Course/master/images/MVC.png)
  
  
  
