@@ -399,7 +399,7 @@ Next Step is to add 'babel-polyfill' in the entry point in webpack.config.js fil
 Widely used and well known architecture, Model Vioew Controller Architecture(MVC) has its main advantage that it very nicely decouples the **Presentation logic** from the **Application logic** with a Controller in between them, that controls the entire App. 
 MVC is possible thanks to ES6 Modules, which allows us to make our Javascript Apps more modular by separating different aspects of the App into different files. We can use one or more module for different aspects of the App. 
 
-For example let's say we have a **Search functionality**. We will have a **Search Module** in which we do the Ajax Calls to get the recipes for a certain search query from an API. And on the other hand we have the **View** where we get the search query string from the user interface and also where we print the results of the search. The last apice of MVC puzzle, the **Controller** is the one that brings **Search Module** and **Search View** together, the glue between them.
+For example let's say we have a **Search functionality**. We will have a **Search Module** in which we do the Ajax Calls to get the recipes for a certain search query from an API. And on the other hand we have the **View** where we get the search query string from the user interface and also where we print the results of the search. The last and most important piece of the MVC puzzle, is the **Controller** which brings **Search Module** and **Search View** together, working like a glue between them.
 
 
 
