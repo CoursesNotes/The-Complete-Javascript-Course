@@ -338,7 +338,7 @@ Setting Up Babel:
  
  > STEP **(3) Create a Babel config file**: 
  
- Just create a new file name **.babelrc** which will be automatically recognized by the IDE as babel 6 file. 
+ Just create a new file with the name -  **.babelrc** which will be automatically recognized by the IDE as babel 6 file. 
  In here all we pass is just an Object. The _.babelrc_ filw is just a dot file and not a javascript file. HEre is an example:
  
  
