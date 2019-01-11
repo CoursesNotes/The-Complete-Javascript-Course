@@ -273,10 +273,15 @@ Just like before we have to require this package and save it in a variable:
 
  - FINAL STEP - is to Integrate Babel into our workflow, to complete the setup. 
  
- **What is BABEL?** - Babel is a Javascript Compiler making possible the use of next generation Javascript. 
+**What is BABEL?** - Babel is a Javascript Compiler making possible the use of next generation Javascript. 
 
 Setting Up Babel: 
-  In order to make Babel work you need to dowload a couple of packages: 
+  In order to make Babel work you need to: 
+> (1) Dowload Babel packages; 
+> (2) Add the settings for Babel in webpack.confi file;
+> (3) Create a Babel config file.
+
+> STEP **(1) Dowload Babel packages**: 
    > _npm install babel-core_ - which contains the core functionalities of the compiler; 
    > _npm install babel-preset-env_ - Babel preset which takes care that all the modern JavaScript features are converted back to ES5;
    > _npm install babel-loader_ - Needed for Webpack to actually load Babel files; 
@@ -291,6 +296,7 @@ Setting Up Babel:
     npm install babel-core babel-preset-env babel-loader --save-dev
 
 ```
+> STEP **(2) Add the settings for Babel in webpack.confi file**: 
 
 **What does the Loaders in Webpack do?** 
    - Allows us to import or load all kind of different files and more importantly to process them(like converting SASS to CSS Code or convert ES6 to ES5 Javascript);
@@ -302,17 +308,63 @@ Setting Up Babel:
  
   //in webpack.config.js add the following properties:
   
- 
+ module.exports = {
+    entry: './src/js/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'js/bundle.js'
+    },
+    devServer: {
+        //here we specify the folder from which webpack should serve the files:
+        contentBase: './dist'
+    },
+    module: {
+        rules: [
+            {
+                //Regular expression testing for all the Javascript files
+                //  The test is looking for all the files and check if they end in js
+                test: /\.js$/,
+                //excludes anything that is a node modules folder
+                // if wqe wouldn't do that, than Babel would apply to all of the thousands Javascript files inside node
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            }
+        ]
+    }
 
 ```
  
+ > STEP **(3) Create a Babel config file**: 
+ 
+ Just create a new file name **.babelrc** which will be automatically recognized by the IDE as babel 6 file. 
+ In here all we pass is just an Object. The _.babelrc_ filw is just a dot file and not a javascript file. HEre is an example:
  
  
- 
- 
- 
- 
- 
+```javascript
+    {
+        // preset is a collection of code transform plug-ins,
+        // they are piece of code which apply transformation to our code
+        "preset": [
+            //stands for environment which is the Browser
+            // corresponds to babel-preset-env
+            "env", {
+                "target": {
+                    "browsers": [
+                        //Babel automatically figures out which ES6 features
+                        // needs to convert in order to work on 
+                        // the last five verions of all the browsers 
+                        "last 5 versions",
+                        "ie >= 8"
+                    ]
+                }
+            }
+        ]
+    }
+
+
+```
  
  
  
