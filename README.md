@@ -412,11 +412,20 @@ So Model and View never actually have to communicate, which makes the entire App
 -->   
   
  **What is an API?**
-  - an API key it's like a password given to each user, unique ID which each user can use in order to make requests, so that the API can track how many requests you make per day. 
+  - an API key it's like a password given to each user, unique ID which each user can use in order to make requests, so that the API can track how many requests you make per day( Usage: 0 / 50 ) as shown in the example below:
+  
+  
+  ![API](https://raw.githubusercontent.com/CoursesNotes/The-Complete-Javascript-Course/master/images/api.png)
  
  
+ Instead of fetch(), you can use a very knowm HTTP library called axios, since fetch doesn't work in all browsers. 
+ To install axios just type the command below: 
  
+ ```javascript
  
+    npm install axios --save
+ 
+ ```
  
  
  
