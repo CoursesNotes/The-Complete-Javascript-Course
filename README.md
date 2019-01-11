@@ -403,13 +403,16 @@ For example let's say we have a **Search functionality**. We will have a **Searc
 
 So Model and View never actually have to communicate, which makes the entire App more modular and easier to maintain. The Model is always concernead about the data and the apps logic, while the View gets and displays data from and to user interface. 
  
- 
- 
  ![Model View Controller](https://raw.githubusercontent.com/CoursesNotes/The-Complete-Javascript-Course/master/images/MVC.png)
  
  
+ ## How ES6 Modules Work
  
- 
+ #### General Rules: 
+  - To create a javascript Module file there is a name convention to use capital letter for the name of the file(Example: Search.js);
+  - Create 2 folders named models and views and add your files in there respecting the naming convention for Models with first letter uppercase;
+  
+  
  
  
  
