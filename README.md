@@ -407,8 +407,7 @@ So Model and View never actually have to communicate, which makes the entire App
  
  
 ## Make API Calls
-<--
-- To create a javascript Module file there is a name convention to use capital letter for the name of the file(Example: Search.js);
+<!-- To create a javascript Module file there is a name convention to use capital letter for the name of the file(Example: Search.js);
   - Create 2 folders named models and views and add your files in there respecting the naming convention for Models with first letter uppercase;
 -->   
   
