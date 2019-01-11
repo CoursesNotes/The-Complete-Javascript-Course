@@ -411,7 +411,8 @@ So Model and View never actually have to communicate, which makes the entire App
   - Create 2 folders named models and views and add your files in there respecting the naming convention for Models with first letter uppercase;
 -->   
   
- 
+ **What is an API?**
+  - an API key it's like a password given to each user, unique ID which each user can use in order to make requests, so that the API can track how many requests you make per day. 
  
  
  
