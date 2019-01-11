@@ -51,7 +51,7 @@
     -  ! + tab - Write exclamation point + hit the tab, writes a pre-formatted HTML skeleton. 
  
  
-### Create a Webpack Configuration: 
+### Setting a Webpack Configuration file: 
 
 **What is Webpack?**
   - Most commonly used Asset Bundler which bundles not only javascript files but also all kind of assets like Images, Javascript, CSS;
