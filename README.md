@@ -51,7 +51,7 @@
     -  ! + tab - Write exclamation point + hit the tab, writes a pre-formatted HTML skeleton. 
  
  
-### Setting a Webpack Configuration file: 
+## Setting a Webpack Configuration file: 
 
 **What is Webpack?**
   - Most commonly used Asset Bundler which bundles not only javascript files but also all kind of assets like Images, Javascript, CSS;
@@ -369,13 +369,34 @@ Here is the full setup:
 
 
 ```
+
+Also we need to install polyfill babel package, since there are things that we cannot really convert since they were not present in the ES5 version of Javascript Language. That's why they need to be pollyfilled for example promises, methods like array.from, all the enhancements which were not present in ES5; Promises are not present in ES5, but what we can do is to write some ES5 code that basically implements the promise in ES5 so that we can use it in our Project, which is exactly what a polyfill does.
+
+In order to use a Polyfill we need to install another package: 
+
+```javascript
+  
+  //we are using --save because this is a real dependency which will go in our final bundle
+  npm install babel-polyfill --save
  
+ ```
  
+Next Step is to add 'babel-polyfill' in the entry point in webpack.config.js file, as shown below: 
+
+```javascript
+
+      module.exports = {
+          entry: ['babel-polyfill','./src/js/index.js'],
+          output: {
+              path: path.resolve(__dirname, 'dist'),
+              filename: 'js/bundle.js'
+          }
+
+```
  
- 
- 
- 
- 
+## MODEL VIEW CONTROLLER - MVC
+
+
  
  
  
