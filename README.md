@@ -482,6 +482,7 @@ All of the below questions represent the state of the App, at a given moment.
 - How many servings are currently calculated?
 - What is the current seach query?
 - What is the current recipe?
+
 All this data is a State and we want them to be in one central place, in one central variable liek an Object in which we have all the data that defines our App, in a given moment in one place and in one Object.
 There are entire state management libraries in Redux used with React, ngRX in Angular7.
  
