@@ -427,6 +427,55 @@ So Model and View never actually have to communicate, which makes the entire App
  
  ```
  
+ **What are the advantages of using Axios?** 
+- Automatically returns json
+- Better at error handling;
+- Works in all the broswers
+
+ Example of AJAX Call using the axios method:
+ 
+ ```javascript
+ 
+ import axios from 'axios';
+
+export default class Search {
+    constructor ( query ) {
+        this.query = query;
+
+    }
+    
+    async getRecipes () {
+
+        // add your api key into const key
+        const key = 'XXSSOOOO124343';
+        // enables cross-origin requests to anywhere.
+        const proxy = 'https://cors-anywhere.herokuapp.com/';
+        const url = "https://something/api/search?"
+    
+        console.log(`Asyn fn call follows in several moments:`);
+        try {
+            
+            const res = await axios(`${url}?key=${key}&q=${this.query}`);
+    
+            //encapsulating the result inside the Search Object
+            this.data = res.data.recipes; 
+    
+            console.log(this.data);
+    
+        }
+        catch (error) {
+            alert (error);
+        }
+    
+    }
+
+}
+
+
+```
+ 
+ 
+ 
  
  
  
